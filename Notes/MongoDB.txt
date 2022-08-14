@@ -1,0 +1,34 @@
+MongoDB notes (terminal)
+
+show dbs = show databases
+
+use pcat-test-db = create a database called pcat-test-db
+
+db.photos.insertOne(
+{ title: "Photo 1",
+description: "Photo description lorem ipsum",
+qty: 20  )}  = create photos collections and
+add a object into the photos collections.
+
+db.photos.find() = get objects from the collection
+
+show collections = show collections
+
+db.photos.insertMany([
+{ title : "Photo 2"},
+{ title : "Photo 3"},
+])	 	=    add multiple objects to the collection.
+
+
+db.photos.find({title: "Photo1"}) = find by title
+
+db.photos.find(
+{qty: {$lt: 200} } ).limit(2) = find objects, quantitiy's
+less than 200. limit 2.
+
+db.photos.updateOne(
+{ {title: "Photo 1"}, { $set: {qty: 222} } })
+= update method.
+
+db.photos.deleteOne(
+{qty: {$lt:500} }) = delete method
