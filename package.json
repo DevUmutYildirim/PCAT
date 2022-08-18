@@ -24,7 +24,7 @@
   "homepage": "https://github.com/DevUmutYildirim/PCAT#readme",
   "devDependencies": {
     "nodemon": "^2.0.19",
-    "prettier": "2.7.1"
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "ejs": "^3.1.8",
