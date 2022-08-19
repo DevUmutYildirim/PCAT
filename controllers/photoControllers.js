@@ -5,7 +5,7 @@ const fileUpload = require('express-fileupload');
 exports.getAllPhotos = async (req, res) => {
   const page = req.query.page || 1;
   const photosPerPage = 3;
-  const totalPhotos = await Photo.find().countDocuments();
+  const totalPhotos = await Photo.find().countDocuments().sort('-dataCreated');
 
   const photos = await Photo.find({})
     .sort('-dateCreated')
